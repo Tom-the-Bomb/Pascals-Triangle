@@ -1,31 +1,33 @@
 import { nk } from "./Solver";
 
-function Number({n, k}) {
+function Number({n, k, conditions}) {
+    const number = nk(n, k);
+    const hl = conditions.filter(([f, _]) => f(number))[0];
     return (
-        <div className="text-center p-2 rounded-2 number">
-            {nk(n, k)}
+        <div style={hl ? {backgroundColor: hl[1]} : null} className="text-center p-2 rounded-2 number">
+            {number}
         </div>
     )
 }
 
-function Row({n}) {
+function Row({n, conditions}) {
     return (
         <div id="row" className="d-flex gap-2 flex-row justify-content-center">
             {
                 [...Array(n + 1)].map(
-                    (_, i) => <Number n={n} k={i}></Number>
+                    (_, i) => <Number n={n} k={i} conditions={conditions}></Number>
                 )
             }
         </div>
     )
 }
 
-export default function Triangle({nRows}) {
+export default function Triangle({nRows, conditions}) {
     return (
        <div id="triangle" className="d-flex gap-2 flex-column">
             {
                 [...Array(nRows)].map(
-                    (_, i) => <Row n={i}></Row>
+                    (_, i) => <Row n={i} conditions={conditions}></Row>
                 )
             }
        </div>
