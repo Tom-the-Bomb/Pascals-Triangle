@@ -10,7 +10,7 @@ export default function Tooltip({children, text, placement}) {
             trigger: "hover",
         });
         return () => t.dispose();
-    }, [text]);
+    }, [text, placement]);
 
     return React.cloneElement(children, { ref: childRef });
 }

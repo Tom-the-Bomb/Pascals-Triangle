@@ -14,7 +14,7 @@ function Number({n, k, conditions}) {
     return (
         number === 1
             ? inner
-            : <Tooltip placement="top" text={number === 1 ? 1 : `${nk(n - 1, k - 1)} + ${nk(n - 1, k)}`}>
+            : <Tooltip placement="top" text={number === 1 ? "1" : `${nk(n - 1, k - 1)} + ${nk(n - 1, k)}`}>
                 {inner}
             </Tooltip>
     )
