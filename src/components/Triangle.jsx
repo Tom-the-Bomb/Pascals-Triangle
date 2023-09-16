@@ -2,9 +2,11 @@ import { nk } from "./Solver";
 
 function Number({n, k, conditions}) {
     const number = nk(n, k);
-    const hl = conditions.filter(([f, _]) => f(number))[0];
+    const hl = conditions.filter((o) => o.f(number, n, k))[0];
     return (
-        <div style={hl ? {backgroundColor: hl[1]} : null} className="text-center p-2 rounded-2 number">
+        <div style={hl ? {backgroundColor: document.getElementById(hl.name + "color").value} : null}
+            className="text-center p-2 rounded-2 number"
+        >
             {number}
         </div>
     )

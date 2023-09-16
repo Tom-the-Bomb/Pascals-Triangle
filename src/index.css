@@ -21,6 +21,10 @@ input {
 h1 {
     font-family: var(--geo-font);
 }
+.color-picker {
+    border: none;
+    background-color: transparent;
+}
 
 .number {
     text-wrap: wrap;
