@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap');
+
+@keyframes header {
+    0%   { transform: scale(0.9); }
+    100% { height: 100%; }
+}
 
 :root {
     --geo-font: "Nabla", "sans-serif";
     --main-font: "Josefin Sans", "sans-serif";
     --code-font: "Jetbrains mono", "monospace";
-    --footer-bg: rgb(24, 16, 11);
+    --math-font: "Noto Serif", "serif";
+
+    --number-bg: rgb(100, 50, 50);
+    --dark-bg: rgb(20, 7, 4);
+    --shadow-bg: rgb(10, 0, 0);
 }
 
 body {
@@ -20,19 +30,36 @@ input {
 
 h1 {
     font-family: var(--geo-font);
+    animation: header 2s infinite alternate
 }
+
+hr {
+    width: 50%;
+}
+
+.nk-ans {
+    background-color: var(--dark-bg);
+    min-width: 40px;
+    color: yellow;
+}
+
+.calc-input {
+    font-family: var(--math-font);
+    width: 5em;
+}
+
 .color-picker {
     border: none;
     background-color: transparent;
 }
 
 .number {
-    text-wrap: wrap;
     aspect-ratio: 1 / 1;
     height: 40px;
-    background-color: rgb(100, 50, 50);
+    background-color: var(--number-bg);
     transition: 0.15s ease;
-    box-shadow: 0 4px 8px rgb(50, 20, 20);
+    box-shadow: 0 8px 10px var(--shadow-bg);
+    font-size: 14px;
 }
 
 .number:hover {
@@ -46,6 +73,15 @@ h1 {
 
 .footer {
     font-family: var(--code-font);
-    background-color: var(--footer-bg);
-    box-shadow: 0 4px 40px 0 rgb(10, 0, 0);
+    background-color: var(--dark-bg);
+    box-shadow: 0 4px 40px 0 var(--shadow-bg);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
