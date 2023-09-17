@@ -28,7 +28,7 @@ function Control({condition, setConditions, defaultColor}) {
             </div>
             <Tooltip text="Select a highlight color">
                 <input
-                    value={defaultColor}
+                    defaultValue={defaultColor}
                     class="form-control-color color-picker" type="color" id={condition.name + "color"}
                 ></input>
             </Tooltip>
@@ -77,6 +77,8 @@ export default function Controls({setNRows, setConditions}) {
                 setConditions={setConditions} defaultColor="#AFA216"></Control>
             <Control condition={{name: "Tetrahedral numbers", f: (_, n, k) => k === 3 || k === n - 3}}
                 setConditions={setConditions} defaultColor="#CD47C8"></Control>
+            <Control condition={{name: "Pentahope numbers", f: (_, n, k) => k === 4 || k === n - 4}}
+                setConditions={setConditions} defaultColor="#611EA9"></Control>
         </div>
     )
 }
