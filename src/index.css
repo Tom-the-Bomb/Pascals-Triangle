@@ -56,11 +56,11 @@ hr {
 
 .number {
     aspect-ratio: 1 / 1;
-    height: 3em;
+    height: 40px;
     background-color: var(--number-bg);
     transition: 0.15s ease;
     box-shadow: 0 8px 10px var(--shadow-bg);
-    font-size: 1.4vmin;
+    font-size: 14px;
 }
 
 .number:hover {
