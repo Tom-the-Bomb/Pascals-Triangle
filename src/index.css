@@ -22,6 +22,7 @@
 body {
     font-family: var(--main-font);
     color: white;
+    overflow: auto;
 }
 
 input {
@@ -55,11 +56,11 @@ hr {
 
 .number {
     aspect-ratio: 1 / 1;
-    height: 40px;
+    height: 3em;
     background-color: var(--number-bg);
     transition: 0.15s ease;
     box-shadow: 0 8px 10px var(--shadow-bg);
-    font-size: 14px;
+    font-size: 1.4vmin;
 }
 
 .number:hover {
