@@ -32,7 +32,7 @@ export function Solver() {
     return (
         <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
             <hr></hr>
-            <h5 className="text-center">Calculate the <Latex key={1} content="k"></Latex>-th number
+            <h5 className="text-center mx-5">Calculate the <Latex key={1} content="k"></Latex>-th number
                 on the <Latex content="n"></Latex>-th row of Pascal's Triangle
             </h5>
             <form id="nkForm" className="d-flex flex-row gap-2 justify-content-center flex-wrap"

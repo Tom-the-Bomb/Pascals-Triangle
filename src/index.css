@@ -8,6 +8,16 @@
     100% { height: 100%; }
 }
 
+@font-palette-values --yellow {
+    font-family: Nabla;
+    base-palette: 7;
+}
+
+@font-palette-values --yellow-2 {
+    font-family: Nabla;
+    base-palette: 5;
+}
+
 :root {
     --geo-font: "Nabla", "sans-serif";
     --main-font: "Josefin Sans", "sans-serif";
@@ -31,7 +41,12 @@ input {
 
 h1 {
     font-family: var(--geo-font);
-    animation: header 2s infinite alternate
+    font-palette: --yellow;
+    animation: header 2s infinite alternate;
+}
+
+h1:hover {
+    font-palette: --yellow2;
 }
 
 hr {
@@ -56,11 +71,11 @@ hr {
 
 .number {
     aspect-ratio: 1 / 1;
-    height: 40px;
+    height: 2.2vw;
     background-color: var(--number-bg);
     transition: 0.15s ease;
     box-shadow: 0 8px 10px var(--shadow-bg);
-    font-size: 14px;
+    font-size: 0.8vw;
 }
 
 .number:hover {
