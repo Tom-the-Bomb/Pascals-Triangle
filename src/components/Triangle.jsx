@@ -34,7 +34,7 @@ function Row({n, conditions}) {
 
 export default function Triangle({nRows, conditions}) {
     return (
-       <div id="triangle" className="d-flex gap-2 flex-column overflow-auto">
+       <div id="triangle" className="d-flex gap-2 flex-column p-2">
             {
                 [...Array(nRows)].map(
                     (_, i) => <Row n={i} conditions={conditions}></Row>

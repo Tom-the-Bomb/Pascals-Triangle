@@ -46,11 +46,15 @@ h1 {
 }
 
 h1:hover {
-    font-palette: --yellow2;
+    font-palette: --yellow-2;
 }
 
 hr {
     width: 50%;
+}
+
+#triangle {
+    overflow-x: auto;
 }
 
 .nk-ans {
@@ -71,11 +75,11 @@ hr {
 
 .number {
     aspect-ratio: 1 / 1;
-    height: 2.2vw;
+    height: 40px;
     background-color: var(--number-bg);
     transition: 0.15s ease;
     box-shadow: 0 8px 10px var(--shadow-bg);
-    font-size: 0.8vw;
+    font-size: 14px;
 }
 
 .number:hover {
