@@ -2,7 +2,7 @@ import { nk } from "./Solver";
 import Tooltip from "./Tooltip";
 
 function Number({n, k, conditions}) {
-    const number = nk(n, k);
+    const number = Math.round(nk(n, k));
     const hl = conditions.filter((o) => o.f(number, n, k))[0];
 
     const inner =
@@ -14,7 +14,10 @@ function Number({n, k, conditions}) {
     return (
         number === 1
             ? inner
-            : <Tooltip placement="top" text={number === 1 ? "1" : `${nk(n - 1, k - 1)} + ${nk(n - 1, k)}`}>
+            : <Tooltip
+                placement="top"
+                text={number === 1 ? "1" : `${Math.round(nk(n - 1, k - 1))} + ${Math.round(nk(n - 1, k))}`}
+            >
                 {inner}
             </Tooltip>
     )
@@ -34,12 +37,14 @@ function Row({n, conditions}) {
 
 export default function Triangle({nRows, conditions}) {
     return (
-       <div id="triangle" className="d-flex gap-2 flex-column p-2">
-            {
-                [...Array(nRows)].map(
-                    (_, i) => <Row n={i} conditions={conditions}></Row>
-                )
-            }
+        <div className="overflow-wrap">
+            <div id="triangle" className="d-flex gap-2 flex-column p-3">
+                {
+                    [...Array(nRows)].map(
+                        (_, i) => <Row n={i} conditions={conditions}></Row>
+                    )
+                }
+            </div>
        </div>
     )
 }

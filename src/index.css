@@ -53,8 +53,33 @@ hr {
     width: 50%;
 }
 
+.overflow-wrap {
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -40px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 0 40px;
+}
+
+.overflow-wrap::-webkit-scrollbar {
+    width: 12px;
+}
+
+.overflow-wrap::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.overflow-wrap::-webkit-scrollbar-thumb {
+    background-color: rgb(111, 105, 105);
+    border-radius: 1em;
+}
+
+.overflow-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(84, 74, 74);
+}
+
 #triangle {
-    overflow-x: auto;
+    width: min-content;
 }
 
 .nk-ans {

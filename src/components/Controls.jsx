@@ -59,8 +59,8 @@ export default function Controls({setNRows, setConditions}) {
                         name="nRows"
                         class="form-control"
                         id="row-n"
-                        min="1" max="20"
-                        placeholder="1 to 20"
+                        min="1" max="30"
+                        placeholder="1 to 30"
                     ></input>
                 </div>
                 <button className="btn btn-success" type="submit">Apply</button>
