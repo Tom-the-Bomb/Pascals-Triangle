@@ -32,7 +32,7 @@
 body {
     font-family: var(--main-font);
     color: white;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 input {
@@ -122,11 +122,11 @@ hr {
     box-shadow: 0 4px 40px 0 var(--shadow-bg);
 }
 
-.footer-link {
+.footer a {
     text-decoration: none;
 }
 
-.footer-link:hover {
+.footer a:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
