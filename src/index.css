@@ -32,6 +32,7 @@
 body {
     font-family: var(--main-font);
     color: white;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
