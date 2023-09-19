@@ -29,7 +29,7 @@
     --shadow-bg: rgb(10, 0, 0);
 }
 
-html {
+html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -37,8 +37,6 @@ html {
 body {
     font-family: var(--main-font);
     color: white;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 input {
